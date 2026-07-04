@@ -1,28 +1,28 @@
 # AlphaFold3 PyTorch
 
-A pure PyTorch implementation scaffold for AlphaFold 3-style inference, designed to become compatible with official AlphaFold 3 weights obtained directly from Google DeepMind.
+A pure PyTorch scaffold for AlphaFold 3-style inference, built with an eye toward eventually loading the real AlphaFold 3 weights from Google DeepMind.
 
-This repository is intentionally separate from the teaching repo `Alphafold3_Repro`:
+This lives separately from `Alphafold3_Repro` on purpose:
 
-- `Alphafold3_Repro`: tutorials, guidance, readable exercises, and runnable educational demos.
-- `Alphafold3_PyTorch`: model files only, focused on PyTorch modules and weight compatibility.
+- `Alphafold3_Repro` is the teaching repo — tutorials, exercises, runnable demos.
+- `Alphafold3_PyTorch` is just the model — PyTorch modules and (eventually) weight compatibility, with none of the tutorial scaffolding.
 
-## Status
+## Where things stand
 
-This is a model-only scaffold. It defines the package boundaries for the implementation:
+This is a model-only scaffold right now — it lays out the package boundaries, not a finished model:
 
 - input embedding
-- Pairformer-style trunk
-- diffusion-style coordinate module
-- atom prediction head
-- full model wrapper
-- future DeepMind weight conversion adapter
+- a Pairformer-style trunk
+- a diffusion-style coordinate module
+- an atom prediction head
+- a full model wrapper
+- a DeepMind weight-conversion adapter (not built yet)
 
-It does not include AlphaFold 3 weights.
+No AlphaFold 3 weights ship with this repo.
 
-## Weight Policy
+## Weight policy
 
-Official AlphaFold 3 weights must be obtained directly from Google DeepMind and used only under their terms. This repository must never commit, mirror, or redistribute model weights or converted checkpoints.
+Official AlphaFold 3 weights have to come directly from Google DeepMind, under their terms. This repo will never commit, mirror, or redistribute weights or converted checkpoints — that's a hard line, not a TODO.
 
 ## Install
 
@@ -30,6 +30,6 @@ Official AlphaFold 3 weights must be obtained directly from Google DeepMind and 
 pip install -e .
 ```
 
-## Reference Projects
+## Reference projects
 
 - https://github.com/google-deepmind/alphafold3
