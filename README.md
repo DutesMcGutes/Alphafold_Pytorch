@@ -32,6 +32,4 @@ pip install -e .
 
 ## Reference Projects
 
-- https://github.com/kilianmandon/alphafold3-pytorch
-- https://github.com/kilianmandon/alphafold3-decoded
 - https://github.com/google-deepmind/alphafold3
